@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.hjiya.cn/"/>
-  <updated>2020-03-21T02:50:04.944Z</updated>
+  <updated>2020-03-21T03:44:51.956Z</updated>
   <id>http://blog.hjiya.cn/</id>
   
   <author>
@@ -21,14 +21,24 @@
     <link href="http://blog.hjiya.cn/2020/03/21/birthday/"/>
     <id>http://blog.hjiya.cn/2020/03/21/birthday/</id>
     <published>2020-03-21T02:47:04.000Z</published>
-    <updated>2020-03-21T02:50:04.944Z</updated>
+    <updated>2020-03-21T03:44:51.956Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>闲来无事，搭个博客吧，也不知道写些啥，那就记录下我那平淡无奇的生活吧。</p><a href="http://blogpic.hjiya.cn/wallhaven-725842.webp" data-fancybox="images" data-caption="主人没有描述我哦~" target="_blank" rel="noopener"><img src="http://blogpic.hjiya.cn/wallhaven-725842.webp"></a><p><img src alt></p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;闲来无事，搭个博客吧，也不知道写些啥，那就记录下我那平淡无奇的生活吧。&lt;/p&gt;
+&lt;a href=&quot;http://blogpic.hjiya.
+      
+    
     </summary>
     
-      <category term="技术" scheme="http://blog.hjiya.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="随想" scheme="http://blog.hjiya.cn/categories/%E9%9A%8F%E6%83%B3/"/>
     
+    
+      <category term="悦读" scheme="http://blog.hjiya.cn/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
