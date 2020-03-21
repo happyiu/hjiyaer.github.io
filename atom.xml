@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.hjiya.cn/"/>
-  <updated>2020-03-21T05:38:50.241Z</updated>
+  <updated>2020-03-21T05:41:16.264Z</updated>
   <id>http://blog.hjiya.cn/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://blog.hjiya.cn/2020/03/21/interview1/"/>
     <id>http://blog.hjiya.cn/2020/03/21/interview1/</id>
     <published>2020-03-21T05:23:03.000Z</published>
-    <updated>2020-03-21T05:38:50.241Z</updated>
+    <updated>2020-03-21T05:41:16.264Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="1-node是单线程还是双线程"><a href="#1-node是单线程还是双线程" class="headerlink" title="1. node是单线程还是双线程"></a>1. node是单线程还是双线程</h2><p>Node是单线程的，但Node能开启多进程</p><h2 id="2-那Node怎么开启多线程"><a href="#2-那Node怎么开启多线程" class="headerlink" title="2. 那Node怎么开启多线程"></a>2. 那Node怎么开启多线程</h2><p>可以使用Node里的内置模块 <code>Cluster</code> 开启多进程</p><p>下面来看段代码</p><pre><code class="js">const cluster = require(&#39;cluster&#39;)const os = require(&#39;os&#39;)const numCPUs = os.cpus().lengthconst process = require(&#39;process&#39;)console.log(&#39;numCPUs&#39;,numCPUs)const workers = {}if(cluster.isMaster){  cluster.on(&#39;death&#39;, function(worker){    worker = cluster.fork()    workers[worker.pid] = worker  })  // 主进程  for(let i=0;i&lt;numCPUs;i++){    const worker = cluster.fork()    workers[worker.pid] = worker  }  // 当进程被终止  process.on(&#39;SIGTERM&#39;, function(){    for(let pid in workers){      process.kill(pid)    }    process.exit(0)  })} else {  // 其他进程，工作进程  const app = require(&#39;./app&#39;)  app.use(async (ctx,next) =&gt; {    console.log(&#39;worker&#39; + cluster.worker.id + &#39;,PID: &#39; + process.pid)    next()  })  app.listen(3000,() =&gt; {    console.log(&#39;http://127.0.0.1:3000&#39;)  })}</code></pre><h2 id="3-这里都是监听了统一端口，他们会冲突吗？"><a href="#3-这里都是监听了统一端口，他们会冲突吗？" class="headerlink" title="3. 这里都是监听了统一端口，他们会冲突吗？"></a>3. 这里都是监听了统一端口，他们会冲突吗？</h2><ul><li>并不会冲突，简单的说<ul><li>在服务器同时启动多个进程。</li><li>每个进程都跑的是同一份源码（好比把以前一个进程的工作分给多个进程去做）</li><li>更神奇的是，这些进程可以同时监听一个端口</li></ul></li><li>其中<ul><li>启动其他进程的叫做Master进程，他好比是个包工头，不做具体的工作，只负责启动其他进程</li><li>其他被Master启动的叫做Worker进程，顾名思义就是干活的工人，它们接受请求，对外提供服务</li><li>Woker进程数量一般工具服务器的CPU决定，这样就可以利用多核资源</li></ul></li></ul><h2 id="4-那它们是怎么调度的"><a href="#4-那它们是怎么调度的" class="headerlink" title="4. 那它们是怎么调度的"></a>4. 那它们是怎么调度的</h2><p>未完待续…</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="1-node是单线程还是多线程"><a href="#1-node是单线程还是多线程" class="headerlink" title="1. node是单线程还是多线程"></a>1. node是单线程还是多线程</h2><p>Node是单线程的，但Node能开启多进程</p><h2 id="2-那Node怎么开启多线程"><a href="#2-那Node怎么开启多线程" class="headerlink" title="2. 那Node怎么开启多线程"></a>2. 那Node怎么开启多线程</h2><p>可以使用Node里的内置模块 <code>Cluster</code> 开启多进程</p><p>下面来看段代码</p><pre><code class="js">const cluster = require(&#39;cluster&#39;)const os = require(&#39;os&#39;)const numCPUs = os.cpus().lengthconst process = require(&#39;process&#39;)console.log(&#39;numCPUs&#39;,numCPUs)const workers = {}if(cluster.isMaster){  cluster.on(&#39;death&#39;, function(worker){    worker = cluster.fork()    workers[worker.pid] = worker  })  // 主进程  for(let i=0;i&lt;numCPUs;i++){    const worker = cluster.fork()    workers[worker.pid] = worker  }  // 当进程被终止  process.on(&#39;SIGTERM&#39;, function(){    for(let pid in workers){      process.kill(pid)    }    process.exit(0)  })} else {  // 其他进程，工作进程  const app = require(&#39;./app&#39;)  app.use(async (ctx,next) =&gt; {    console.log(&#39;worker&#39; + cluster.worker.id + &#39;,PID: &#39; + process.pid)    next()  })  app.listen(3000,() =&gt; {    console.log(&#39;http://127.0.0.1:3000&#39;)  })}</code></pre><h2 id="3-这里都是监听了统一端口，他们会冲突吗？"><a href="#3-这里都是监听了统一端口，他们会冲突吗？" class="headerlink" title="3. 这里都是监听了统一端口，他们会冲突吗？"></a>3. 这里都是监听了统一端口，他们会冲突吗？</h2><ul><li>并不会冲突，简单的说<ul><li>在服务器同时启动多个进程。</li><li>每个进程都跑的是同一份源码（好比把以前一个进程的工作分给多个进程去做）</li><li>更神奇的是，这些进程可以同时监听一个端口</li></ul></li><li>其中<ul><li>启动其他进程的叫做Master进程，他好比是个包工头，不做具体的工作，只负责启动其他进程</li><li>其他被Master启动的叫做Worker进程，顾名思义就是干活的工人，它们接受请求，对外提供服务</li><li>Woker进程数量一般工具服务器的CPU决定，这样就可以利用多核资源</li></ul></li></ul><h2 id="4-那它们是怎么调度的"><a href="#4-那它们是怎么调度的" class="headerlink" title="4. 那它们是怎么调度的"></a>4. 那它们是怎么调度的</h2><p>未完待续…</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;1-node是单线程还是双线程&quot;&gt;&lt;a href=&quot;#1-node是单线程还是双线程&quot; class=&quot;headerlink&quot; title=&quot;1. node是单线程还是双线程&quot;&gt;&lt;/a&gt;1. node是单线程还是双线程&lt;/h2&gt;&lt;p&gt;Node是单线程的，但Node能
+        &lt;h2 id=&quot;1-node是单线程还是多线程&quot;&gt;&lt;a href=&quot;#1-node是单线程还是多线程&quot; class=&quot;headerlink&quot; title=&quot;1. node是单线程还是多线程&quot;&gt;&lt;/a&gt;1. node是单线程还是多线程&lt;/h2&gt;&lt;p&gt;Node是单线程的，但Node能
       
     
     </summary>
