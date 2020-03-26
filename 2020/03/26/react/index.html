@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">react | 咦~被你发现咯</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "猫になりたいの明明就";
+  mashiro_option.author_name = "明明就";
+  mashiro_option.site_url = "https://sakura.hjiya.cn";
+  mashiro_option.v_appId = "f6vhjKWXELjVUi3uwwvtSSGp-gzGzoHsz";
+  mashiro_option.v_appKey = "L73UnjoOqFSxdieIWQjqxycw";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "http://blogpic.hjiya.cn/3.webp,http://blogpic.hjiya.cn/1.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://sakura.hjiya.cn">
+          <img src="https://cdn.jsdelivr.net/gh/happyiu/cdn@master//img/custom/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>寒江孤影 江湖故人 相逢何必曾相识</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/happyiu" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/happyiu/cdn@master//img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://music.163.com/#/user/home?id=289149324" target="_blank" class="social-github" title="网易云">
+                    <img src="https://cdn.jsdelivr.net/gh/happyiu/cdn@master//img/social/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=910785329&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="QQ">
+                    <img src="https://cdn.jsdelivr.net/gh/happyiu/cdn@master//img/social/qq.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/happyiu/cdn@master//img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/happyiu/cdn@master//img/custom/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">猫になりたいの</span>
+            <span class="shironeko">明明就</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    标签
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          文章
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/about/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-meetup" aria-hidden="true"></i>
+                    我？
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/happyiu/cdn@master/img/startdash/react.png);" src="http://blogpic.hjiya.cn/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/happyiu/cdn@master/img/startdash/react.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      react</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://cdn.jsdelivr.net/gh/happyiu/cdn@master/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">明明就 🌸</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-3-26<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="React-入门笔记"><a href="#React-入门笔记" class="headerlink" title="React 入门笔记"></a>React 入门笔记</h1><h2 id="React-应用创建方法"><a href="#React-应用创建方法" class="headerlink" title="React 应用创建方法"></a>React 应用创建方法</h2><p>使用 create react app 脚手架命令快速创建 React应用</p>
+<pre><code class="shell">npx create-react-app name
+</code></pre>
+<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><p>在 index.js 中渲染上页面的核心代码</p>
+<pre><code class="js">import React from &#39;react&#39;
+import ReactDOM from &#39;react-dom&#39;
+
+// 创建了一个简单的React元素
+const app = &lt;h1&gt;Welcome React&lt;/h1&gt;
+
+ReactDOM.render(
+  app,
+  document.querySelector(&#39;#root&#39;)
+)
+</code></pre>
+<h2 id="创建组件"><a href="#创建组件" class="headerlink" title="创建组件"></a>创建组件</h2><h3 id="使用函数创建组件"><a href="#使用函数创建组件" class="headerlink" title="使用函数创建组件"></a>使用函数创建组件</h3><pre><code class="js">const App = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;welcome {props.title}&lt;/h1&gt;
+    &lt;/div&gt;
+  )
+}
+
+ReactDOM.render(
+  &lt;App title=&quot;1901&quot;/&gt;,
+  document.querySelector(&#39;#root&#39;)
+)
+</code></pre>
+<h3 id="Class类创建组件"><a href="#Class类创建组件" class="headerlink" title="Class类创建组件"></a>Class类创建组件</h3><pre><code class="js">import React from &#39;react&#39;
+import {render} from &#39;react-dom&#39;
+
+// 定义组件的第二种方式 --&gt; 类
+class App extends React.Component {
+  render(){
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;Welcome React {this.props.title}&lt;/h1&gt;       
+      &lt;/div&gt;
+    )
+  }
+};
+
+render(
+  &lt;App title=&#39;2019&#39;/&gt;,
+  document.querySelector(&#39;#root&#39;)
+);
+
+// 底层原理
+// &lt;App title=&quot;2019&quot; /&gt;  编译成以下代码
+
+// const app = new App({
+//   title: &quot;2019&quot;
+// }).render()
+</code></pre>
+<h2 id="jsx-原理"><a href="#jsx-原理" class="headerlink" title="jsx 原理"></a>jsx 原理</h2><p>虚拟DOM树方式</p>
+<p>React.createElemet(type,[props],[…children]) 是一个方法，用于创建元素，参数：（标签名，标签属性，子元素…）</p>
+<pre><code class="js">// class App extends Component {
+//   render(){
+//     return (
+//       &lt;div&gt;
+//         &lt;h1&gt;Welcome React&lt;/h1&gt;       
+//       &lt;/div&gt;
+//     )
+//   }
+// }
+// 底层编译为 以下方式
+class App extends Component {
+  render(){
+    return (
+      React.createElement(
+        &#39;div&#39;,
+        {
+          className: &#39;dv1&#39;,
+          id: &#39;appRoot&#39;
+        },
+        React.createElement(
+          &#39;h1&#39;,
+          {
+            className: &#39;title&#39;,
+          },
+          &#39;Welcome React&#39;
+        )
+      )
+    )
+  }
+}
+</code></pre>
+<h2 id="样式类名的绑定"><a href="#样式类名的绑定" class="headerlink" title="样式类名的绑定"></a>样式类名的绑定</h2><ul>
+<li>内联样式创建</li>
+<li>使用 styled-components 插件 定义样式组件，再使用样式组件包裹</li>
+<li>使用 className 的方法直接添加 类名</li>
+<li>使用 classnames 插件，动态添加 类名</li>
+</ul>
+<pre><code class="js">// 定义样式组件
+const Title = styled.h1`
+  color: red
+`
+const Header = () =&gt; &lt;h1&gt;hi&lt;/h1&gt;
+// 定义组件的第二种方式 --&gt; 类
+class App extends Component {
+  render(){
+    // 使用内联样式创建
+    const style = {color: &quot;red&quot;}
+    return (
+      &lt;div&gt;
+        &lt;Header /&gt;
+        &lt;h1 style={style}&gt;Welcome React {this.props.title}&lt;/h1&gt;   
+        {/* 使用 className 方式  注意这里样式类名需要 className 而不是 class */}
+        &lt;h1 className=&quot;has-test-pink&quot;&gt;Welcome React {this.props.title} 2&lt;/h1&gt; 
+        {/* 使用 classnames 插件 绑定动态样式 */}
+        &lt;h1 className={classNames(&#39;a&#39;,{&#39;has-test-pink&#39;: true})}&gt;Welcome React {this.props.title} 3&lt;/h1&gt;
+        {/* 使用定义好的样式组件  */}
+        &lt;Title className={classNames(&#39;a&#39;,{&#39;has-test-pink&#39;: true})}&gt;Welcome React {this.props.title} 4&lt;/Title&gt; 
+
+      &lt;/div&gt;
+    )
+  }
+}
+</code></pre>
+<h2 id="向子组件传值做类型检查"><a href="#向子组件传值做类型检查" class="headerlink" title="向子组件传值做类型检查"></a>向子组件传值做类型检查</h2><p>prop-types </p>
+<ul>
+<li><p>函数组件的类型检查方法</p>
+<pre><code class="html">&lt;TodoHeader title=&quot;代办事项&quot; x={1} y={2}&gt;
+hi
+&lt;/TodoHeader&gt;
+</code></pre>
+<pre><code class="js">TodoHeader.propTypes = {
+title: PropTypes.string,
+x: PropTypes.number.isRequired,   // 这里可以链式操作
+y: PropTypes.number,
+}
+</code></pre>
+</li>
+<li><p>类组件的类型检查方法</p>
+<pre><code class="html">&lt;TodoInput btnText=&quot;添加吧&quot;/&gt;
+</code></pre>
+<pre><code class="js">export default class TodoInput extends Component {
+// 静态属性
+static propTypes = {
+  btnText: PropTypes.string
+}
+render() {
+  return (
+    &lt;div&gt;
+      &lt;input /&gt;&lt;button&gt;{this.props.btnText}&lt;/button&gt;
+    &lt;/div&gt;
+  )
+}
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="子组件传参设置默认值"><a href="#子组件传参设置默认值" class="headerlink" title="子组件传参设置默认值"></a>子组件传参设置默认值</h2><ul>
+<li>函数组件设置默认值<pre><code class="js">TodoHeader.defaultProps = {
+title: &#39;Welcome&#39;
+}
+</code></pre>
+</li>
+<li>类组件设置默认值<pre><code class="js">export default class TodoInput extends Component {
+static propTypes = {
+  btnText: PropTypes.string
+}
+static defaultProps = {
+  btnText: &#39;添加&#39;
+}
+render() {
+  return (
+    &lt;div&gt;
+      &lt;input /&gt;&lt;button&gt;{this.props.btnText}&lt;/button&gt;
+    &lt;/div&gt;
+  )
+}
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="组件自己的数据状态"><a href="#组件自己的数据状态" class="headerlink" title="组件自己的数据状态"></a>组件自己的数据状态</h2><p>class 类组件 -有状态组件<br>function 函数组件 -无状态组件（Hook有解决办法）</p>
+<p>使用 this.state.name 来获取数据</p>
+<p><code>state</code> 只有 class类组件才会有</p>
+<pre><code class="js">export default class App extends Component {
+  // 方法一
+  // state = {
+  //   title: &#39;代办事项App&#39;
+  // }
+  // 方法二
+  constructor(){
+    super()
+    this.state = {
+      title: &#39;待办事项App&#39;
+    }
+  }
+  render() {
+    return (
+      &lt;Fragment&gt;
+        &lt;TodoHeader title={this.state.title} x={1} y={2}&gt;
+          hi
+        &lt;/TodoHeader&gt;
+        &lt;TodoInput btnText=&quot;添加吧&quot;/&gt;
+        &lt;TodoList /&gt;
+        {this.state.title}
+      &lt;/Fragment&gt;
+    )
+  }
+}
+
+</code></pre>
+<h2 id="渲染数据"><a href="#渲染数据" class="headerlink" title="渲染数据"></a>渲染数据</h2><ul>
+<li>直接渲染<pre><code class="js">{this.state.name}
+</code></pre>
+</li>
+<li><p>html文本渲染(Vue中的v-html)</p>
+<pre><code class="js">&lt;div dangerouslySetInnerHTML={{__html: this.state.htxt}} /&gt;
+</code></pre>
+</li>
+<li><p>列表渲染</p>
+<pre><code class="js">this.props.todos.map(item=&gt;{
+return (
+  &lt;TodoItem key={item.id} {...item} /&gt;
+)
+})
+</code></pre>
+</li>
+</ul>
+<h2 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h2><p>使用 <code>this.setState()</code> 的方法来修改数据</p>
+<p>this.setState() 需要两个参数 </p>
+<h3 id="第一个参数又有两种情况"><a href="#第一个参数又有两种情况" class="headerlink" title="第一个参数又有两种情况"></a>第一个参数又有两种情况</h3><p>第一种情况是一个对象：</p>
+<pre><code class="js">handleLikeClick = () =&gt; {
+  // 需要使用 setState 修改数据
+  this.setState({
+    isLike: !this.state.isLike
+  })
+}
+</code></pre>
+<p>第二种情况是一个方法： 方法中有个参数，保存着修改数据前的数据</p>
+<pre><code class="js">this.setState((prev)=&gt;{
+  console.log(prev)
+  return {
+    isLike: !this.state.isLike
+  }
+})
+</code></pre>
+<h3 id="第二个参数为一个回调函数，来获取最新的数据状态"><a href="#第二个参数为一个回调函数，来获取最新的数据状态" class="headerlink" title="第二个参数为一个回调函数，来获取最新的数据状态"></a>第二个参数为一个回调函数，来获取最新的数据状态</h3><pre><code class="js">this.setState((prev)=&gt;{
+  console.log(prev)
+  return {
+    isLike: !this.state.isLike
+  }
+},()=&gt;{
+  console.log(this.state.isLike)
+})
+</code></pre>
+<h3 id="setState-特性"><a href="#setState-特性" class="headerlink" title="setState 特性"></a>setState 特性</h3><ul>
+<li><p>setState是异步操作</p>
+</li>
+<li><p>⽤setState更新状态⽽不能直接修改</p>
+<pre><code class="js">this.state.counter += 1; //错误的
+</code></pre>
+</li>
+<li><p>且setState是批量执行的，因此对同一个状态执行多次只起一次作用，多个状态更新可以放在同一个setState中进行</p>
+<pre><code class="js">componentDidMount(){
+this.setState({counter: this.state.counter + 1});   
+this.setState({counter: this.state.counter + 1});   
+this.setState({counter: this.state.counter + 1});
+}
+// 最后 Counter的值为 1
+</code></pre>
+</li>
+</ul>
+<p>（setState只有在合成事件和钩⼦子函数中是异步的，在原生事件和setTimeout、setInterval中都是同步的）</p>
+<p>使其同步的方法</p>
+<p>第一种方法 如上this.setState() 传入回调函数</p>
+<p>第二种方法就是原生事件 </p>
+<pre><code class="js">componentDidMount(){
+  document.getElementsByTagName(&#39;button&#39;)[0].addEventListener(&#39;click&#39;, () =&gt; {
+    this.setState({
+      counter: this.state.counter + 2
+    })
+  })
+}
+</code></pre>
+<p>第三种就是定时器</p>
+<pre><code class="js">handleLikeClick = () =&gt; {
+  setTimeout(() =&gt; {
+    this.setState({
+      counter: this.state.counter + 1
+    })
+  }, 0);
+}
+</code></pre>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>onClick，onChange….</p>
+<ul>
+<li><p>方法一</p>
+<pre><code class="html">&lt;input onChange={this.handleInputChange} type=&quot;text&quot; value={this.state.inputValue}/&gt;
+</code></pre>
+<pre><code class="js">handleInputChange = (e)=&gt; {
+this.setState({
+  inputValue: e.currentTarget.value
+})
+}
+</code></pre>
+</li>
+<li><p>方法二：可以传递参数</p>
+<pre><code class="html">&lt;button onClick={this.handleClick.bind(this,123)}&gt;{this.props.btnText}&lt;/button&gt;
+</code></pre>
+<pre><code class="js">handleClick(num){
+console.log(this.state.inputValue,num)
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="事件传参"><a href="#事件传参" class="headerlink" title="事件传参"></a>事件传参</h2><ul>
+<li><p>外面再包层匿名函数，因为使用这种事件是匿名函数，渲染的时候就会自动执行，所以外面再加层匿名函数</p>
+<pre><code class="html">&lt;button onClick={() =&gt; {
+this.handleBtnClick(123)
+}}&gt;事件传参&lt;/button&gt;
+</code></pre>
+</li>
+<li><p>使用.bind(this,参数列表)</p>
+</li>
+</ul>
+<h2 id="hook-钩子函数"><a href="#hook-钩子函数" class="headerlink" title="hook 钩子函数"></a>hook 钩子函数</h2><p>hook 钩子函数可以使 函数组件也能拥有 类组件中自己的状态和其他特性</p>
+<pre><code class="js">// 需要导入 useState useEffect hook来完成操作
+import React, { useState, useEffect } from &#39;react&#39;
+
+export default function User() {
+  // const date = new Date()
+  const [date, setDate] = useState(new Date())  // 一个变量定义一次
+
+  useEffect(() =&gt; {
+    const timeid = setInterval(() =&gt; {
+      setDate(new Date())
+    }, 1000)
+    return () =&gt; clearInterval(timeid)
+  })
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;{date.toLocaleTimeString()}&lt;/h1&gt;
+    &lt;/div&gt;
+  )
+}
+</code></pre>
+<h2 id="组件通讯"><a href="#组件通讯" class="headerlink" title="组件通讯"></a>组件通讯</h2><h3 id="props"><a href="#props" class="headerlink" title="props"></a>props</h3><pre><code class="js">// 父组件
+&lt;Search store={store} title=&quot;props&quot; tellme={tellme} /&gt;
+
+// 子组件
+// this.props.title  this.props.tellme 的形式来接收
+
+
+</code></pre>
+<h3 id="createContext-是-react-提供的跨组件的方法"><a href="#createContext-是-react-提供的跨组件的方法" class="headerlink" title="createContext 是 react 提供的跨组件的方法"></a>createContext 是 react 提供的跨组件的方法</h3><p>createContext 这个方法的结果是一个对象，里面有2个组件，Provider和Consumer</p>
+<p>Provider 用于提供状态</p>
+<p>Consumer 用于接收状态</p>
+<pre><code class="js">// 想解构出来
+const {
+  Provider,
+  Consumer:CounterConsumer    
+} = createContext()
+
+class CounterProvider extends Component {
+  constructor(){
+    super()
+    // 这里的状态是共享的，任何CounterProvider的子孙组件，都可以使用CounterConsumer来接收
+    this.state = {
+      count: 100
+    }
+  }
+  // 这里的方法也会继续通过Provider共享下去
+  incrementCount = () =&gt; {
+    this.setState({
+      count: this.state.count + 1
+    })
+  }
+  decrementCount = () =&gt; {
+    this.setState({
+      count: this.state.count - 1
+    })
+  }
+  render(){
+    return (
+      // 使用 Provider 这个组件 ，必须有个value值，这个Value中科院传递任何的数据，一般传递一个对象
+      &lt;Provider value={{count: this.state.count,
+      onIncrementCount: this.incrementCount,
+      onDecrementCount:this.decrementCount}}&gt;
+        {this.props.children}
+      &lt;/Provider&gt;
+    )
+  }
+}
+
+// 定义的子孙组件，使用 CounterConsumer 来接收count 
+class Counter extends Component {
+  render(){
+    return (
+      &lt;CounterConsumer&gt;
+        {
+          //注意，这里的CounterConsumer包裹着的必须是一个方法，
+          //参数是Provider提供的Value
+          ({count}) =&gt; {
+            return &lt;span&gt;{count}&lt;/span&gt;
+          }
+        }
+      &lt;/CounterConsumer&gt;
+    )
+  }
+}
+</code></pre>
+<h2 id="HOC-高阶组件-Height-order-component"><a href="#HOC-高阶组件-Height-order-component" class="headerlink" title="HOC 高阶组件 Height-order component"></a>HOC 高阶组件 Height-order component</h2><p>可以劫持页面渲染</p>
+<pre><code class="js">// App.js
+import React, { Component } from &#39;react&#39;
+// 导入 高阶组件
+import witCopyright from &#39;./witCopyright&#39;
+
+class App extends Component {
+  render(){
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;h&lt;/h1&gt;   
+      &lt;/div&gt;
+    )
+  }
+}
+
+// 使用高阶组件，并将 App 组件 作为参数传入
+export default witCopyright(App)
+</code></pre>
+<pre><code class="js">// 高阶组件 witCopyright.js
+import React, { Component } from &#39;react&#39;
+
+const witCopyright = (YourComponent) =&gt; {
+  return class witCopyright extends Component {
+    render() {
+      return (
+        &lt;&gt;
+          这里就是 刚才传入函数，将其使用
+          这里注意 要使用 {...this.props} 更改 props
+          &lt;YourComponent {...this.props}/&gt;
+          &lt;div&gt;&amp;copy; 2019 &amp;emsp; 黄即呀&lt;/div&gt;
+
+        &lt;/&gt;
+      )
+    }
+  }
+}
+
+export default witCopyright
+</code></pre>
+<h2 id="使用装饰器-装饰高阶组件的写法"><a href="#使用装饰器-装饰高阶组件的写法" class="headerlink" title="使用装饰器 装饰高阶组件的写法"></a>使用装饰器 装饰高阶组件的写法</h2><p>安装包</p>
+<p>第一步</p>
+<blockquote>
+<p>npm i react-app-rewired –sava-dev</p>
+</blockquote>
+<p>然后修改 page.json 文件，修改为 react-app-rewired</p>
+<pre><code class="js">&quot;scripts&quot;: {
+  &quot;start&quot;: &quot;react-app-rewired start&quot;,
+  &quot;build&quot;: &quot;react-app-rewired build&quot;,
+  &quot;test&quot;: &quot;react-app-rewired test&quot;,
+  &quot;eject&quot;: &quot;react-scripts eject&quot;
+}
+</code></pre>
+<p>然后再 项目目录下创建一个 config-overrides.js 即可</p>
+<pre><code class="js">// config-overrides.js
+module.exports = (config) =&gt; {
+  // 在这里可以对 config 进行配置
+  return config
+}
+</code></pre>
+<p>第二步 安装 customize-cra 来方便定义配置项</p>
+<blockquote>
+<p>npm i customize-cra –sava-dev</p>
+</blockquote>
+<p>修改 config-overrides.js</p>
+<pre><code class="js">const {override,addDecoratorsLegacy} = require(&#39;customize-cra&#39;)
+module.exports = override(
+  addDecoratorsLegacy()
+)
+</code></pre>
+<blockquote>
+<p>npm i @babel/plugin-proposal-decorators -D</p>
+</blockquote>
+<h2 id="状态管理-redux-手动连接"><a href="#状态管理-redux-手动连接" class="headerlink" title="状态管理 redux 手动连接"></a>状态管理 redux 手动连接</h2><h3 id="手动实现-redux-状态管理"><a href="#手动实现-redux-状态管理" class="headerlink" title="手动实现 redux 状态管理"></a>手动实现 redux 状态管理</h3><p>简单的redux的实现 ， 详情见 redux-pronciple-2.html</p>
+<pre><code class="js">    const countState = {
+      count: 5
+    }
+
+    const changeState = (state,action) =&gt; {
+      if(!state){
+        return countState
+      }
+      switch(action.type){
+        default: 
+          return state;
+        case &quot;JIAN&quot;: 
+          return {
+            ...state,
+            count: state.count - action.n
+          }
+          break;
+        case &quot;JIA&quot;:
+        return {
+            ...state,
+            count: state.count + action.n
+          }
+      }
+    }
+
+    const createStore = (reducer) =&gt; {
+      let state = null
+      const getState = () =&gt; state
+      const Listeners = []
+      const subScribe = (Listener) =&gt; Listeners.push(Listener)
+      const dispatch = (action) =&gt; {
+        state = changeState(state,action)
+        Listeners.forEach(listener =&gt; listener())
+      }
+      dispatch({})
+      return {
+        getState,
+        dispatch,
+        subScribe
+      }
+    }
+
+    const store = createStore(changeState)
+
+    const renderCount = () =&gt; {
+      countDisplay.innerHTML = store.getState().count
+    }
+
+    renderCount()
+    store.subScribe(renderCount)
+</code></pre>
+<h3 id="使用-redux"><a href="#使用-redux" class="headerlink" title="使用 redux"></a>使用 redux</h3><ul>
+<li>首先在 src目录下新建 2个 文件夹<ul>
+<li>reducers</li>
+<li>actions</li>
+</ul>
+</li>
+<li>然后在 src 目录下新建一个文件：store.js<br><code>`</code>js<br>import { createStore } from ‘redux’<br>// 导入 reducers<br>import rootReducer from ‘./reducers’</li>
+</ul>
+<p>export default createStore(rootReducer)</p>
+<pre><code>- 在reducers文件夹下新建一个 car.js 并导出
+```js
+const initState = []
+
+export default (state = initState,action) =&gt; {
+  switch(action.type){
+    default: 
+      return state
+  }
+}
+</code></pre><ul>
+<li>在reducers文件夹下新建一个 index.js 文件用来合并导出reducers中的其他文件<br><code>`</code>js<br>// 用于合并多个 reducers<br>import { combineReducers} from ‘redux’<br>import car from ‘./car’</li>
+</ul>
+<p>export default combineReducers({<br>  car<br>})</p>
+<pre><code>
+`......太痛苦了......`
+
+## 状态管理 React-redux 自动连接
+
+- 创建 reducers
+- 合并 reducers
+- createStore
+- Provider store = { store }
+- connect(mapStateToProps,{...actionCreators})(YourComponent)
+- actionCreators
+- 修改reducers
+
+### 首先创建 reducers 文件目录下的 reducer分类文件
+```js
+// 未来避免 actionType 重复，一般会把action放在文件里，统一管理
+import actionType from &#39;../actions/actionType&#39;
+
+// 对于 购物车 来说，这里有个初始化的状态
+const initState = [
+  {
+    id: 1,
+    title: &#39;Apple&#39;,
+    price: 999,
+    amount: 10
+  },
+  {
+    id: 2,
+    title: &#39;Orange&#39;,
+    price: 99,
+    amount: 6
+  }
+]
+
+// 创建 购物车的 reducer ，是个纯函数，reducer的固定写法 两个参数
+// 第一个参数是 state并有一个初始值
+// 第二个参数是 action
+export default (state = initState,action) =&gt; {
+  // 根据不同的 action 来处理不同的结果，每次返回新的state，返回的类型要一样
+  switch(action.type){
+    // 一定要有default ，当actionType 不对时候，就不做任何处理，返回上一次的state
+    default: 
+      return state;
+    case actionType.CAR_AMOUNT_INCREMENT:
+      return state.map(item =&gt; {
+        if(item.id === action.payload.id){
+          item.amount += 1
+        }
+        return item
+      })
+      case actionType.CAR_AMOUNT_DECREMENT:
+      return state.map(item =&gt; {
+        if(item.id === action.payload.id){
+          item.amount -= 1
+        }
+        return item
+      })
+  }
+}
+</code></pre><h3 id="reducers目录下创建-index-js-合并多个-reducer-并导出"><a href="#reducers目录下创建-index-js-合并多个-reducer-并导出" class="headerlink" title="reducers目录下创建 index.js 合并多个 reducer 并导出"></a>reducers目录下创建 index.js 合并多个 reducer 并导出</h3><p>由于在实际中，只有单一的store,但是状态会有很多分类，因此需要划分reducer，但createStore() 参数只接受一个reducer，所以redux提供了一个合并多个reducer的方法：combineReducers</p>
+<pre><code class="js">// 用于合并多个 reducers
+import { combineReducers} from &#39;redux&#39;
+
+// 引入 car reducer，如果有多个，继续引入
+import car from &#39;./car&#39;
+
+// 导出合并后的 reducer
+export default combineReducers({
+  // 把多个 reducer作为 combineReducers 参数对象 传入，在外部就可以通过 store.getState().car 来获取到 carReducer里面的state
+  car
+})
+</code></pre>
+<h3 id="创建-Action-目录，然后创建特定的-car-js"><a href="#创建-Action-目录，然后创建特定的-car-js" class="headerlink" title="创建 Action 目录，然后创建特定的 car.js"></a>创建 Action 目录，然后创建特定的 car.js</h3><pre><code class="js">import actionType from &#39;./actionType&#39;
+
+// action 有两种写法
+// 一：写成一个对象，缺点不好传递参数
+// export const increment = {
+//   type: actionType.CAR_AMOUNT_INCREMENT
+// }
+// 二：写成一个方法，返回一个对象，这个对象才是真正的action
+export const increment = (id) =&gt; {
+  return {
+    type: actionType.CAR_AMOUNT_INCREMENT,
+    payload:{
+      id
+    }
+  }
+}
+
+export const decrement = (id) =&gt; {
+  return {
+    type: actionType.CAR_AMOUNT_DECREMENT,
+    payload:{
+      id
+    }
+  }
+}
+</code></pre>
+<h3 id="在Action目录下创建-actionType-来统一管理-action"><a href="#在Action目录下创建-actionType-来统一管理-action" class="headerlink" title="在Action目录下创建 actionType 来统一管理 action"></a>在Action目录下创建 actionType 来统一管理 action</h3><pre><code class="js">export default {
+  CAR_AMOUNT_INCREMENT: &#39;CAR_AMOUNT_INCREMENT&#39;,
+  CAR_AMOUNT_DECREMENT: &#39;CAR_AMOUNT_DECREMENT&#39;,
+}
+</code></pre>
+<h3 id="创建-store-js"><a href="#创建-store-js" class="headerlink" title="创建 store.js"></a>创建 store.js</h3><pre><code class="js">// createStore 是 redux用来创建store的方法
+import { createStore } from &#39;redux&#39;
+// 引入合并后的 reducer
+import rootReducer from &#39;./reducers&#39;
+// createStore(rootReducer) 第一个参数必须是 一个reducer
+export default createStore(rootReducer)
+</code></pre>
+<h3 id="最后使用放在应用程序最顶层，且必须有-store-属性"><a href="#最后使用放在应用程序最顶层，且必须有-store-属性" class="headerlink" title="最后使用放在应用程序最顶层，且必须有 store 属性"></a>最后使用<producer></producer>放在应用程序最顶层，且必须有 store 属性</h3><pre><code class="js">import React from &#39;react&#39;
+import {render} from &#39;react-dom&#39;
+import App from &#39;./App&#39;
+import store from &#39;./store&#39;
+
+// Rrovier 是 react-redux 提供的一个组件
+import { Provider } from &#39;react-redux&#39;
+
+render(
+  // 这个store 的值，就是我们所创建的 store
+  // 只要被 Producer 包裹的组件，所有的后代组件都可以使用Redux.connect做连接
+  &lt;Provider store={store}&gt;
+    &lt;App /&gt;
+  &lt;/Provider&gt;,
+  document.querySelector(&quot;#root&quot;)
+)
+</code></pre>
+<h3 id="子组件连接获取数据"><a href="#子组件连接获取数据" class="headerlink" title="子组件连接获取数据"></a>子组件连接获取数据</h3><pre><code class="js">import React, { Component } from &#39;react&#39;
+// 导入 actionCreators
+import { increment,decrement } from &#39;../../actions/car&#39;
+// connect 执行后是一个高阶组件
+import { connect } from &#39;react-redux&#39;
+
+class CarList extends Component {
+  render() {
+    return (
+      &lt;table&gt;
+        &lt;tbody&gt;
+          {
+            this.props.carList.map(item =&gt; {
+              return (
+                &lt;tr key={item.id}&gt;
+                  &lt;td&gt;{item.id}&lt;/td&gt;  
+                  &lt;td&gt;{item.title}&lt;/td&gt;
+                  &lt;td&gt;{item.price}&lt;/td&gt;
+                  &lt;td&gt;
+                    &lt;button onClick={()=&gt;{
+                      this.props.dispatch(decrement(item.id))
+                    }}&gt;-&lt;/button&gt;
+                    &lt;span&gt;{item.amount}&lt;/span&gt;
+                    &lt;button onClick={()=&gt;{
+                      this.props.dispatch(increment(item.id))
+                    }}&gt;+&lt;/button&gt;
+                  &lt;/td&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+              )
+            })
+          }
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    )
+  }
+}
+
+// 这里的 state 实际上就是 store.getState()的值
+const mapStateToProps = (state) =&gt; {
+  // 这里return了什么，组件中就可以this.props来获取
+  return {
+    carList: state.car
+  }
+}
+// connect方法常用的参数
+// 第一个参数： mapStateToProps 作用就是从store里把state注入到当前组件props
+// 第二个参数：可以是mapDisPatchProps，这个主要作用就是将action生成的方法注入到单签组件的props
+
+// 直接第二个参数传递一个对象，里面的对象就是actionCrators，只要传入了，在组件中就可以通过this.props.actionCreator来调用
+export default connect(mapStateToProps)(CarList)
+</code></pre>
+<h2 id="redux-处理-异步操作-需要一个中间件处理"><a href="#redux-处理-异步操作-需要一个中间件处理" class="headerlink" title="redux 处理 异步操作 需要一个中间件处理"></a>redux 处理 异步操作 需要一个中间件处理</h2><blockquote>
+<p>npm install redux-thunk</p>
+</blockquote>
+<ul>
+<li><p>先在 store 中传入applyMiddleware(thunk)</p>
+<pre><code class="js">export default createStore(rootReducer,applyMiddleware(thunk))
+</code></pre>
+</li>
+<li><p>然后在 actions 中导出以下代码</p>
+<pre><code class="js">export const decrementAsync = id =&gt; dispatch =&gt; {
+setTimeout(() =&gt; {
+  dispatch(decrement(id))
+}, 1000);
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="路由-React-Router"><a href="#路由-React-Router" class="headerlink" title="路由 React Router"></a>路由 React Router</h2><h3 id="简单匹配"><a href="#简单匹配" class="headerlink" title="简单匹配"></a>简单匹配</h3><p>Web 上安装只需要安装这一个就可以了</p>
+<blockquote>
+<p>npm i react-router-dom -s</p>
+</blockquote>
+<p>只需要在最顶层使用一次Router就可以了<br>Router 只需要在最顶级使用一次就可以了</p>
+<pre><code class="js">import React from &#39;react&#39;
+import {render} from &#39;react-dom&#39;
+import App from &#39;./App&#39;
+// 将 BrowserRouter 重命名为 Router ，方便调用
+// HashRouter and BrowserRouter 可以选择 路由模式
+// Route 组件相当于 Vue中 的 &lt;router-view&gt;&lt;/router-view&gt;
+import { BrowserRouter as  Router,Route } from &#39;react-router-dom&#39;
+
+render(
+  // 最顶层只需使用 Router 包裹一次就可以了
+  &lt;Router&gt;
+    使用 Route组件 来渲染组件
+    &lt;Route component={App}/&gt;
+  &lt;/Router&gt;,
+  document.querySelector(&quot;#root&quot;)
+)
+</code></pre>
+<h3 id="路由跳转"><a href="#路由跳转" class="headerlink" title="路由跳转"></a>路由跳转</h3><pre><code class="js">import React, { Component } from &#39;react&#39;
+// 路由跳转需要使用到 Link 组件，相当于Vue中的,&lt;router-link&gt;&lt;/router-link&gt;
+// NavLink 作用和 Link 作用差不多，但 NavLink可以给链接自动添加一些属性
+// Redirect 组件 负责 页面重定向 
+import { Route, Link, NavLink, Redirect } from &#39;react-router-dom&#39;
+
+import {
+  Home,
+  Artical,
+  Users
+} from &#39;./views&#39;
+
+export default class App extends Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;Link to=&quot;/home&quot;&gt;首页&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;Link to=&quot;/artical&quot;&gt;文章&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;NavLink to=&quot;/users&quot;&gt;用户&lt;/NavLink&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        页面重定向
+        &lt;Redirect to=&quot;/home&quot; from=&quot;/&quot;&gt;&lt;/Redirect&gt;
+        &lt;Route component={Home} path=&quot;/home&quot; /&gt;
+        &lt;Route component={Artical} path=&quot;/artical&quot; /&gt;
+        &lt;Route component={Users} path=&quot;/users&quot; /&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+</code></pre>
+<h3 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h3><ul>
+<li>点击链接后，链接不消失，在链接的页面上放置 <router></router></li>
+</ul>
+<p>artical.js</p>
+<pre><code class="js">import React, { Component } from &#39;react&#39;
+import {
+  Link,
+  Route
+} from &#39;react-router-dom&#39;
+import ArticalDetail from &#39;./ArticalDetail&#39;
+
+export default class Artical extends Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Link to=&quot;/artical/1&quot;&gt;文章一&lt;/Link&gt;
+        &lt;Link to=&quot;/artical/2&quot;&gt;文章二&lt;/Link&gt;
+        这里设置 path=&quot;/artical/:id&quot;
+        &lt;Route component={ArticalDetail} path=&quot;/artical/:id&quot; /&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+</code></pre>
+<p>组件中 获取参数的方法</p>
+<pre><code class="js">{this.props.match.params.id}
+</code></pre>
+<ul>
+<li>点击链接后链接消失,即将 <router> 放置值与连接页面同级的页面</router></li>
+</ul>
+<p>App.js</p>
+<pre><code class="js">import React, { Component } from &#39;react&#39;
+import { Route, Link, NavLink, Redirect } from &#39;react-router-dom&#39;
+
+import {
+  Home,
+  Artical,
+  Users,
+  ArticalDetail
+} from &#39;./views&#39;
+
+export default class App extends Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;Link to=&quot;/home&quot;&gt;首页&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;Link to=&quot;/artical&quot;&gt;文章&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;NavLink to=&quot;/users&quot;&gt;用户&lt;/NavLink&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;Redirect to=&quot;/home&quot;&gt;&lt;/Redirect&gt;
+        &lt;Route component={Home} path=&quot;/home&quot; /&gt;
+        注意要加上 exact（完全匹配）
+        &lt;Route component={Artical} path=&quot;/artical&quot; exact/&gt;
+
+        &lt;Route component={ArticalDetail} path=&quot;/artical/:id&quot; /&gt;
+        &lt;Route component={Users} path=&quot;/users&quot; /&gt;
+
+      &lt;/div&gt;
+    )
+  }
+}
+</code></pre>
+<h3 id="处理-404"><a href="#处理-404" class="headerlink" title="处理 404"></a>处理 404</h3><pre><code class="js">import React, { Component } from &#39;react&#39;
+import { Route, Link, NavLink, Redirect, Switch } from &#39;react-router-dom&#39;
+
+import {
+  Home,
+  Artical,
+  Users,
+  ArticalDetail,
+  NotFound
+} from &#39;./views&#39;
+
+export default class App extends Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;Link to=&quot;/home&quot;&gt;首页&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;Link to=&quot;/artical&quot;&gt;文章&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;NavLink to=&quot;/users&quot;&gt;用户&lt;/NavLink&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        注意 需要使用 Switch 包裹，不然符合条件的都回去渲染
+        &lt;Switch&gt;
+          &lt;Route component={Home} path=&quot;/home&quot; /&gt;
+          &lt;Route component={Artical} path=&quot;/artical&quot; exact/&gt;
+          &lt;Route component={ArticalDetail} path=&quot;/artical/:id&quot; /&gt;
+          &lt;Route component={Users} path=&quot;/users&quot; /&gt;
+          &lt;Route component={NotFound} path=&quot;/404&quot; /&gt;
+          &lt;Redirect to=&quot;/home&quot; from=&quot;/&quot; exact /&gt;
+          &lt;Redirect to=&quot;/404&quot; /&gt;
+        &lt;/Switch&gt;
+
+      &lt;/div&gt;
+    )
+  }
+}
+
+</code></pre>
+<h2 id="路由其他API"><a href="#路由其他API" class="headerlink" title="路由其他API"></a>路由其他API</h2><h3 id="使用-render-function-俩代替-component"><a href="#使用-render-function-俩代替-component" class="headerlink" title="使用 render(function) 俩代替 component={}"></a>使用 render(function) 俩代替 component={}</h3><p>优点，可以传递参数</p>
+<pre><code class="js">  &lt;Router&gt;
+    使用render使，里面要是个函数，其中有一个参数为 路由信息 使用{...props}向下合并传递
+    &lt;Route render={(props)=&gt;&lt;App {...props} x={1}/&gt;} path=&quot;/&quot; /&gt;
+  &lt;/Router&gt;,
+</code></pre>
+<h3 id="隐式传参代替url传参"><a href="#隐式传参代替url传参" class="headerlink" title="隐式传参代替url传参"></a>隐式传参代替url传参</h3><p>可以用来埋点分享</p>
+<pre><code class="js">&lt;Link to={{
+  pathname: 'artical/2',
+  state: {
+    form: 'artical'
+  }
+}}&gt;文章二&lt;/Link&gt;
+</code></pre>
+<ul>
+<li>埋点<br>发送数据方法</li>
+<li>ajax</li>
+<li>img: 兼容性最好<pre><code class="js">  const img = new Image()
+  img.src = &quot;http://...../button-01.gif?x=16....&quot;
+</code></pre>
+</li>
+<li>sendBeacon 兼容性不好，成功率最高</li>
+</ul>
+<h3 id="编程式导航"><a href="#编程式导航" class="headerlink" title="编程式导航"></a>编程式导航</h3><ul>
+<li><p>history.push(‘…’)</p>
+<pre><code class="js">export default class ArticalDetail extends Component {
+goHome = () =&gt; {
+  this.props.history.push(&#39;/&#39;)
+}
+render() {
+  console.log(this.props)
+  return (
+    &lt;div&gt;
+      文章详情
+      {this.props.match.params.id}
+      &lt;button onClick={this.goHome}&gt;返回首页&lt;/button&gt;
+    &lt;/div&gt;
+  )
+}
+}
+</code></pre>
+</li>
+<li><p>this.props.history.push({对象})</p>
+<pre><code class="js">goHome = () =&gt; {
+this.props.history.push({
+  pathname: &#39;/&#39;,
+  state: {
+    x: 1
+  }
+})
+}
+render() {
+console.log(this.props)
+return (
+  &lt;div&gt;
+    文章详情
+    {this.props.match.params.id}
+    &lt;button onClick={this.goHome}&gt;返回首页&lt;/button&gt;
+  &lt;/div&gt;
+)
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="withRouter-高阶组件"><a href="#withRouter-高阶组件" class="headerlink" title="withRouter 高阶组件"></a>withRouter 高阶组件</h3><p>若想要点击一个组件，触发组件内的事件并使用当前的参数，则可以使用 withRouter 高阶组件包裹 组件</p>
+<pre><code class="js">export default withRouter(BackHome)
+</code></pre>
+<h2 id="Antd-蚂蚁设计-UI库"><a href="#Antd-蚂蚁设计-UI库" class="headerlink" title="Antd 蚂蚁设计 UI库"></a>Antd 蚂蚁设计 UI库</h2><blockquote>
+<p>npm i antd -s</p>
+</blockquote>
+<h3 id="配置-Antd"><a href="#配置-Antd" class="headerlink" title="配置 Antd"></a>配置 Antd</h3><p><a href="https://ant.design/docs/react/use-with-create-react-app-cn" target="_blank" rel="noopener">create-react-app配置</a></p>
+<blockquote>
+<p>npm i react-app-rewired customize-cra -D</p>
+</blockquote>
+<p>然后修改 page.json</p>
+<p>然后在项目根目录创建一个 config-overrides.js 用于修改默认配置。</p>
+<blockquote>
+<p>npm i babel-plugin-import -D<br>使用 babel-plugin-import后修改 config-overrides.js</p>
+</blockquote>
+<p>使用Antd自定义主题需要先安装 less less-loader 因为 Antd 样式文件使用less开发</p>
+<blockquote>
+<p>npm i less less-loader -s</p>
+</blockquote>
+<pre><code class="js">const { override, fixBabelImports, addDecoratorsLegacy, addLessLoader } = require(&quot;customize-cra&quot;);
+
+module.exports = override(
+  fixBabelImports(&quot;import&quot;, { //antd按需加载 
+    libraryName: &quot;antd&quot;,
+    libraryDirectory: &quot;es&quot;,
+    style: &quot;css&quot;,
+    style: true
+  }),
+  addDecoratorsLegacy(),   // 配置装饰器
+  addLessLoader({   // Antd 自定义主题设置
+    javascriptEnabled: true,
+    modifyVars: { &#39;@primary-color&#39;: &#39;#1DA57A&#39; },
+  }),
+);
+
+</code></pre>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/happyiu/cdn@master//img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/happyiu/cdn@master//img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/03/21/interview1/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="http://blogpic.hjiya.cn/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                面试题思考汇总（Node篇）</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "f6vhjKWXELjVUi3uwwvtSSGp-gzGzoHsz",
+        appKey: "L73UnjoOqFSxdieIWQjqxycw",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/happyiu/cdn@master/img/custom/avatar.jpg" itemprop="image" alt="明明就 🌸" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author">明明就 🌸</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>话废有社恐，但我真的...</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 ERYORE<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+    </div>
+    <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>
+    <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>
+    <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>
+    <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>
+    <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>
+    <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>
+    <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>
+    <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>
+    <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>
+    <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>
+    <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>
+
+    <p style="font-family: 'Ubuntu', sans-serif;">
+      <span style="color: #b9b9b9;">日月盈昃，辰宿列张，寒来暑往，秋收冬藏。</span>
+    </p>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
+        </span>
+      </p>
+    </div>
+    <p>Copyright &copy 2020</p>
+
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "http://blogpic.hjiya.cn/","name":"a6400%26m2.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "http://blogpic.hjiya.cn/","name":"a6400%26m2.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/happyiu/cdn@master//img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">猫になりたいの明明就</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/happyiu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=910785329&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            标签
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  文章
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/about/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-meetup" aria-hidden="true"></i>
+            我？
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="399099360"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>
